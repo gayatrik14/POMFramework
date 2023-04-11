@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ParalelTests" thread-count="5" parallel="tests">
+  <test name="Test1">
+    <classes>
+      <class name="testNgLearning.GroupsSocial"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="Test2">
+	  <classes>
+		  
+		  <class name="testNgLearning.GroupsLearning" />
+	  </classes>
+  </test>
+  
+  <test name="Test3">
+	  <classes>
+		  <class name ="testNgLearning.CloudProviders"/>
+	  </classes>
+  </test>
+</suite> <!-- Suite -->

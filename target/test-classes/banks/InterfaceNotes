@@ -1,0 +1,90 @@
+ 1. Interace cannot be declared as private or protected 
+
+public interface A { } ok
+interface A { } ok
+
+
+private interface A {} compile time error 
+protected  interface A {} compile time error 
+
+
+***************************************************
+
+
+
+
+2.  By default interface in java is abstract
+interface A { }  > abstract interface A { }
+
+
+
+
+
+********************************
+3. by default all the variable in interface is public static final  we cannot use private 
+or protected for the variable 
+********************************************************
+
+
+
+
+4. Variables must be initialized in interface 
+interface A{
+int b ; // throws compile time error 
+int b=10;
+**********************************************************
+
+
+
+5. Class implemneting the interface cannot change the value of the variable
+interface A{
+
+int b=10;
+}
+class Test implements A{
+
+public void m1(){
+b =100 // error
+
+**********************************************************
+
+
+
+6. All the methods should be implemented by the class which is implementing the interface 
+**********************************************************
+
+
+
+7.one interface can extend another interface 
+interface A { }
+interface B { } extends A this is possible 
+
+Class classA { }
+
+interface C extends ClassA{    } wrong 
+
+**********************************************************
+
+
+
+8. one interface cannot implemnet another interface 
+**********************************************************
+
+
+9. A class can implemnet multiple interfaces at the same time this is how we are achieving multiple inheritance 
+**********************************************************
+
+
+
+
+10. A class cannot implement two or more interfaces with same method name and different return type
+********************************************************** 
+
+
+
+
+
+ 
+11. if we have same variable name in two interfaces then we can call those variables in class using interface name and variable name
+
+12. A class can extend another class and implement an interface
